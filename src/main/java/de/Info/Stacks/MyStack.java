@@ -56,10 +56,8 @@ public class MyStack {
 
     public void printStack() {
         System.out.println("++++[Print]++++");
-        MyStackNode nd = top;
-        while (nd != null) {
+        for (MyStackNode nd = top; nd != null; nd = nd.getNext()) {
             System.out.println(nd.getNumber());
-            nd = nd.getNext();
         }
         System.out.println("----[Print]----");
     }
