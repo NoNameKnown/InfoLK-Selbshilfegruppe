@@ -12,6 +12,8 @@ public class MyStackMain {
                 C.push(a);
             } else {
                 while (!C.isEmpty()) {
+                    if (C.top() <= A.top())
+                        break;
                     int c = C.pop();
                     B.push(c);
                 }
@@ -33,6 +35,9 @@ public class MyStackMain {
         A.push(16);
         A.push(11);
         A.push(15);
+        A.push(9);
+        A.push(13);
+        A.push(21);
         A.push(14);
 
         A.printStack();
